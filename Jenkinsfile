@@ -26,5 +26,12 @@ pipeline {
                 sh "mvn install"
             }
         }
+        stage('--deploy--'){
+            steps{
+                sh "cp /opt/.jenkins/workspace/scripted-pipeline1/target/myproj.war /var/lib/tomcat9/webapps/"
+            }
+        }
+            }
+        }
     }
 }
